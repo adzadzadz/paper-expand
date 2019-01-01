@@ -15,7 +15,7 @@ class PaperExpand extends PolymerElement {
     return html`
       <paper-item on-tap="__toggle">[[title]]</paper-item>
       <iron-collapse id="collapse">
-        <div>Content goes here...</div>
+        <div><slot></slot></div>
       </iron-collapse>
     `;
   }
