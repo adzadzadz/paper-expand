@@ -1,6 +1,7 @@
 {
-  "name": "paper-expand",
+  "name": "@adzadzadz/paper-expand",
   "description": "Expansion funcionality based on material design",
+  "version": "1.0.0",
   "main": "paper-expand.js",
   "license": "BSD-3-Clause",
   "dependencies": {

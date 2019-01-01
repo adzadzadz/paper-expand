@@ -13,9 +13,24 @@ import '@polymer/iron-collapse/iron-collapse.js';
 class PaperExpand extends PolymerElement {
   static get template() {
     return html`
-      <paper-item on-tap="__toggle">[[title]]</paper-item>
+      <style>
+        paper-item {
+          background-color: var(--paper-expand-title-bg);
+          border-radius: 8px;
+          cursor: pointer;
+        }
+        iron-collapse {
+          background-color: var(--paper-expand-bg);
+          padding: 12px;
+          border-radius: 8px;
+        }
+      </style>
+
+      <paper-item on-tap="__toggle">
+        <slot name="title"></slot>
+      </paper-item>
       <iron-collapse id="collapse">
-        <div><slot></slot></div>
+        <slot></slot>
       </iron-collapse>
     `;
   }
